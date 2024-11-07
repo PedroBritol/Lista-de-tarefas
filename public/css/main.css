@@ -1,0 +1,32 @@
+.icone{
+    padding: 5px;
+}
+
+.icone:hover{
+    background-color: white;
+    border-radius: 100%;
+}
+
+.acoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acoesIcons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nomeIndex{
+    max-width: 50px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width:440px) {
+    .acoesIcons{
+        flex-direction: column;
+    }
+}
