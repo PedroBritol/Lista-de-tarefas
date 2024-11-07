@@ -25,7 +25,6 @@ class TarefaController extends Controller
 
     public function index()
     {
-        // $tarefas = Tarefa::get();
         $tarefas = Tarefa::orderBy('ordem', 'asc')->get();
 
         return view('index', compact('tarefas'));
@@ -46,21 +45,11 @@ class TarefaController extends Controller
     {
         $data = $request->all();
 
-            // Recupera o contador da sessão
         $contador = session('contador');
 
-        // Incrementa o contador
         $contador += 1;
 
-        // Atualiza o valor do contador na sessão
         session(['contador' => $contador]);
-
-
-        // $validatedData = $request->validate([
-        //     'nome' => 'required|string|max:255|unique:tarefas,nome',
-        //     'custo' => 'required|numeric',
-        //     'data' => 'required|date',
-        // ]);
 
         $tarefa = new Tarefa();
         $tarefa->nome = $request->input('nome');

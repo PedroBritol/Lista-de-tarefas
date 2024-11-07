@@ -47,9 +47,7 @@
     Inserir tarefa
     </button>
 
-    <!-- Modal Inserir-->
     @include('create')
-    <!-- Modal editar-->
 
 
 
